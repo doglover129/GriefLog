@@ -1,0 +1,32 @@
+name: GriefLog
+version: 5.2.1
+main: tk.blackwolf12333.grieflog.GriefLog
+softdepend: [WorldEdit]
+commands:
+    glog:
+        description: Main command, type /glog help for more info.
+        usage: /glog <option> <arguments>
+permissions:
+    grieflog.*:
+        description: Gives access to all GriefLog commands
+        default: op
+        children:
+            grieflog.search: true
+            grieflog.rollback: true
+            grieflog.tool: true
+            grieflog.reload: true
+            grieflog.page: true
+            grieflog.getwarning: true
+            grieflog.tpto: true
+            grieflog.report: true
+    grieflog.getwarning.*:
+        description: Permission to get a warning when someone does something that indicates that he has a modified client.
+        default: false
+        children:
+            grieflog.getwarning.breakair: true
+    grieflog.report.*:
+        description: Permission nodes for the report commands
+        default: false
+        children:
+            grieflog.report.view: false
+            grieflog.report.report: true

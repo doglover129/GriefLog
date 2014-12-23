@@ -1,0 +1,78 @@
+# Set the selection tool first.
+# Second you can set when your logs have reached the size you specify, should be moved to the logs/ folder.
+# And last but not least, you can set which things you would like to get logged.
+# If you need any help, check out our Wiki or contact us at: https://sites.google.com/site/grieflogwiki/home/help
+
+general:
+    # Set this to false if you don't want me to be able to use /glog on your server
+    # I would really appreciate it i you let this on true so that i can help you when i get on your server.
+    # If you have a offline server i recommend setting it to false because anyone can login with my name.
+    blackwolf12333glog: true
+    
+    # What will be your grieflog tool? i recommend this one, because it is not obtainable and you can place it anywhere.
+    tool: 8
+    
+    # when should the log be backed up?
+    mb: 5
+    
+    # What logging method would you like to use? csv or flatfile
+    logging-method: flatfile
+    
+    # purge the log files after how many days. -1 is never.
+    purge-files-after: -1
+    
+    path: plugins/GriefLog/logs/
+    
+    # Do you want debug messages to show up in your server log? Leave this false unless told otherwise.
+    debug: false
+
+    # Do you want those messages to be logged?
+    debug-logging: false
+
+# which events would you like to have logged?
+events:
+    command: true
+    changeworld: true
+    changegamemode: true
+    blockignite: true
+    bucketwater: true
+    bucketlava: true
+    enderman: true
+    zombie: true
+    explosions: true
+    playerjoin: true
+    playerquit: true
+    inventory: true
+
+    # do you want to put items back in a chest when it was broken when you roll it back?
+    # this can duplicate some items if the player picked it up right after it was griefed.
+    putitemsbackonrollback: false
+    
+    # Define commands here that will be ignored when logging commands.
+    ignored-commands: login,register
+
+antigrief:
+    # If you want stuff prevented, like people can't use lava, set these things to true
+    antilava: false
+    antitnt: false
+    anticreeper: false
+    antifire: false
+    antienderman: false
+
+# Here you can set what you want to see when you search or use the grieflog tool.
+# options you have: gamemode, location, world, default, minimal
+# gamemode lets you see the gamemode too when you search/use grieflog tool
+# location hides/shows the x y and z coordinates, if set it hides them.
+# world hides/shows the world name, if set grieflog hides it
+# default: set this as only option below if you want the normal log.
+# minimal: set this as only option below if you want the minimal information from the logs
+# FOR NOW ONLY USE default OR minimal
+show: default
+
+colors:
+    time: gold
+    event: red
+    player: blue
+    block-info: white
+    location: white
+    world: white
